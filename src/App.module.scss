@@ -1,0 +1,46 @@
+$primary-color: rgb(214, 40, 40);
+
+@function test($base1, $base2) {
+    $result: $base1 + $base2;
+    @return $result;
+} 
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+}
+
+.Wrap {
+    width: 1200px;
+    display: flex;
+    margin: auto;
+
+    > .Item {
+        width: 368px;
+        margin: 15px;
+        text-align: center;
+        border: 1px solid #ccc;
+        transform: translateY(0px);
+        transition: .5s;
+
+        > .Txt {
+            > h2 {
+                border-bottom: 1px solid #888;
+                padding-bottom: .3em;
+                margin-bottom: .5em;
+                font-weight: 900;
+            }
+
+            > p {
+                margin-bottom: .5em;
+            }
+            
+        }
+    }
+
+    > .Item:hover {
+        transform: translateY(-50px);
+    }
+
+}
