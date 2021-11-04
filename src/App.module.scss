@@ -5,6 +5,18 @@ $primary-color: rgb(214, 40, 40);
     @return $result;
 } 
 
+@function borderColor() {
+    $primary-color: rgb(214, 40, 40);
+    @return $primary-color;
+}
+
+@mixin borderRadius($radius: 0) {
+    @if $radius != 0 {
+        border-radius: $radius;
+    }
+
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -20,9 +32,10 @@ $primary-color: rgb(214, 40, 40);
         width: 368px;
         margin: 15px;
         text-align: center;
-        border: 1px solid #ccc;
+        border: 1px solid borderColor();
         transform: translateY(0px);
         transition: .5s;
+        @include borderRadius($radius: 10px);
 
         > .Txt {
             > h2 {
