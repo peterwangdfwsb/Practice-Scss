@@ -34,7 +34,7 @@ $primary-color: rgb(214, 40, 40);
         text-align: center;
         border: 1px solid borderColor();
         transform: translateY(0px);
-        transition: .5s;
+        transition: .8s;
         @include borderRadius($radius: 10px);
 
         > .Txt {
