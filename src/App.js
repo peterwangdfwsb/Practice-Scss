@@ -39,6 +39,29 @@ const App =() => {
         </div>
       </div>
 
+      <div className={styles.Item}>
+        <div className={styles.Txt}>
+          <h2> CSS4 </h2>
+          <p> Text4 </p>
+
+        </div>
+      </div>
+
+      <div className={styles.ItemPic}>
+        <div className={styles.Pic}>
+          <img 
+          src="https://picsum.photos/500/400?random=10"
+          alt="new_1"
+          />
+        </div>
+
+        <div className={styles.Txt}>
+          <h2>Practice Float Image</h2>
+          <p>CoCo Poland Spring Chip</p>
+        </div>
+
+      </div>
+
     </div>
   )
 }

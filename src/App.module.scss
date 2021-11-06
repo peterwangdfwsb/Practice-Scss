@@ -24,12 +24,15 @@ $primary-color: rgb(214, 40, 40);
 }
 
 .Wrap {
-    width: 1200px;
+    width: 100%;
     display: flex;
     margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     > .Item {
-        width: 368px;
+        width: 25%;
         margin: 17px;
         text-align: center;
         border: 1px solid borderColor();
@@ -86,6 +89,34 @@ $primary-color: rgb(214, 40, 40);
     > .Image:hover {
         > .ImgTxt h2{
             opacity: 1;
+        }
+    }
+
+    > .ItemPic {
+        display: flex;
+        align-items: center;
+
+        > .Pic {
+            width: 55%;
+            flex-shrink: 0;
+            > img {
+                width: 100%;
+                vertical-align: middle;
+            }
+
+        }
+
+        > .Txt {
+            width: 55%;
+            background-color: rgba(42, 253, 208, .8);
+            flex-shrink: 0;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+        }
+
+        > :first-child{
+            margin-right: -10%;
         }
     }
 
