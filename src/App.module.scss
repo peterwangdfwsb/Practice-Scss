@@ -1,3 +1,4 @@
+
 $primary-color: rgb(214, 40, 40);
 
 @function test($base1, $base2) {
@@ -120,4 +121,11 @@ $primary-color: rgb(214, 40, 40);
         }
     }
 
+}
+
+
+#test1 {
+    > #test2 {
+        margin-top: 30px;
+    }
 }
