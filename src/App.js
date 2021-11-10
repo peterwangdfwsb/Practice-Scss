@@ -130,19 +130,54 @@ const App =() => {
       </div> */}
 
     <form className={styles.formcontainer}>
-      
-      <div className={cx(globalStyles["form-check"], globalStyles["form-switch"])} id={styles.checkIcon}>
-        <input className={cx(globalStyles["form-check-input"])} type={"checkbox"} />
+      {/* <div id={styles.activeCheck}>
+        <p>Active</p>
+      </div>  */}
+      <div id={styles.editIcon}>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-pencil" viewBox="0 0 16 16" id={styles.editImg}>
+        <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+      </svg>
+        <p id={styles.editTxt}> Basic options </p>
+      </div>
+
+      <div id={styles.toggleIcon}>
+        <p id={styles.activeTxt}> Active </p>
+        <div className={cx(globalStyles["form-check"], globalStyles["form-switch"])} id={styles.checkIcon}>
+          <input className={cx(globalStyles["form-check-input"])} type={"checkbox"} />
+        </div>
       </div> 
 
       <div className={cx(globalStyles["form-group"])} id={styles.feedNameContainer}>
-        <label for="feedName" id={styles.feedNameLabel}>Feed Name</label>
+        <label id={styles.feedNameLabel}>Feed Name</label>
         <input className={cx(globalStyles["form-control"])} id={styles.feedName} placeholder="Feed name here" />
       </div>
       
       <div className={cx(globalStyles["form-group"])} id={styles.descriptionContainer}>
-        <label for="description" id={styles.descriptionLabel}>Description (optional)</label>
+        <label id={styles.descriptionLabel}>Description (optional)</label>
         <input className={cx(globalStyles["form-control"])} id={styles.description} placeholder="Feed description name" />
+      </div>
+
+      <div className={cx(globalStyles["form-group"])} id={styles.urlContainer}>
+        <label id={styles.urlLabel}> URL </label>
+        <input className={cx(globalStyles["form-control"])} id={styles.url} placeholder="Feed URL here" />
+      </div>
+
+      <div id={styles.mediaContainer}>
+        <label id={styles.mediaLabel}> Media </label>
+        <select className={cx(globalStyles["form-select"])} aria-label="Default select example" id={styles.media}>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+
+      <div id={styles.statusContainer}>
+        <label id={styles.statusLabel}> Status </label>
+        <select className={cx(globalStyles["form-select"])} aria-label="Default select example" id={styles.status}>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
       </div>
       
       <button type="submit" className={cx(globalStyles["btn"], globalStyles["btn-primary"])}>Submit</button>
