@@ -130,7 +130,7 @@ $primary-color: rgb(214, 40, 40);
     }
 }
 
-html, body, #app #app>div{
+html, body, #root /*#app>div*/{
     height: 100%;
     display: flex;
     justify-content: center;
@@ -138,43 +138,199 @@ html, body, #app #app>div{
     //background-color: rgba(0,0,0,.3);
 }
 
-.container {
-    height: 400px;
-    width: 600px;
-    //background-color: rgba(255,255,255,0.7);
-    border-radius: 10px;
-    backdrop-filter: blur(5px);
-    box-shadow: 0 0 60px #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    > .formcontainer {
-        width: 400px;
-
-        > #checkIcon{
-            margin-bottom: 10px;
+@media screen and (min-width: 777px) {
+    .container {
+        height: 650px;
+        width: 600px;
+        //background-color: rgba(255,255,255,0.7);
+        border-radius: 10px;
+        backdrop-filter: blur(5px);
+        box-shadow: 0 0 60px #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        > .formcontainer {
+            width: 400px;
+    
+            > #editIcon {
+                display: flex;
+                //justify-content: start;
+                //border: 1px solid black;
+    
+                > #editImg {
+                    margin-right: 5px;
+                    position: relative;
+                    top: 1px;
+                    right: 1px;
+                }
+            }
+    
+            > #toggleIcon {
+                //border: 1px solid black;
+                // display: flex;
+                // flex-direction: column;
+    
+                > #activeTxt {
+                    position: relative;
+                    top: 13px;
+                    //border: 1px solid black;
+                }
+    
+                > #checkIcon {
+                    //border: 1px solid black;
+                    margin-bottom: 15px;
+                }
+            }
+    
+            > #feedNameContainer{
+                > #feedNameLabel {
+                    margin-bottom: 6px;
+                }
+    
+                > #feedName {
+                    margin-bottom: 15px;
+                }
+            }
+    
+            > #descriptionContainer{
+                > #descriptionLabel {
+                    margin-bottom: 6px;
+                }
+    
+                > #description {
+                    margin-bottom: 15px;
+                }
+            }
+    
+            > #urlContainer{
+                > #urlLabel {
+                    margin-bottom: 6px;
+                }
+    
+                > #url {
+                    margin-bottom: 15px;
+                }
+            }
+    
+            > #mediaContainer{
+                > #mediaLabel {
+                    margin-bottom: 6px;
+                }
+    
+                > #media {
+                    margin-bottom: 15px;
+                }
+            }
+    
+            > #statusContainer{
+                > #statusLabel {
+                    margin-bottom: 6px;
+                }
+                
+                > #status {
+                    margin-bottom: 15px;
+                }
+            }
+    
         }
-
-        > #feedNameContainer{
-            > #feedNameLabel {
-                margin-bottom: 10px;
-            }
-
-            > #feedName {
-                margin-bottom: 10px;
-            }
-        }
-
-        > #descriptionContainer{
-            > #descriptionLabel {
-                margin-bottom: 10px;
-            }
-
-            > #description {
-                margin-bottom: 10px;
-            }
-        }
-
     }
+    
 }
+
+// .container {
+//     height: 650px;
+//     width: 600px;
+//     //background-color: rgba(255,255,255,0.7);
+//     border-radius: 10px;
+//     backdrop-filter: blur(5px);
+//     box-shadow: 0 0 60px #000;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+
+//     > .formcontainer {
+//         width: 400px;
+
+//         > #editIcon {
+//             display: flex;
+//             //justify-content: start;
+//             //border: 1px solid black;
+
+//             > #editImg {
+//                 margin-right: 5px;
+//                 position: relative;
+//                 top: 1px;
+//                 right: 1px;
+//             }
+//         }
+
+//         > #toggleIcon {
+//             //border: 1px solid black;
+//             // display: flex;
+//             // flex-direction: column;
+
+//             > #activeTxt {
+//                 position: relative;
+//                 top: 13px;
+//                 //border: 1px solid black;
+//             }
+
+//             > #checkIcon {
+//                 //border: 1px solid black;
+//                 margin-bottom: 15px;
+//             }
+//         }
+
+//         > #feedNameContainer{
+//             > #feedNameLabel {
+//                 margin-bottom: 6px;
+//             }
+
+//             > #feedName {
+//                 margin-bottom: 15px;
+//             }
+//         }
+
+//         > #descriptionContainer{
+//             > #descriptionLabel {
+//                 margin-bottom: 6px;
+//             }
+
+//             > #description {
+//                 margin-bottom: 15px;
+//             }
+//         }
+
+//         > #urlContainer{
+//             > #urlLabel {
+//                 margin-bottom: 6px;
+//             }
+
+//             > #url {
+//                 margin-bottom: 15px;
+//             }
+//         }
+
+//         > #mediaContainer{
+//             > #mediaLabel {
+//                 margin-bottom: 6px;
+//             }
+
+//             > #media {
+//                 margin-bottom: 15px;
+//             }
+//         }
+
+//         > #statusContainer{
+//             > #statusLabel {
+//                 margin-bottom: 6px;
+//             }
+            
+//             > #status {
+//                 margin-bottom: 15px;
+//             }
+//         }
+
+//     }
+// }
