@@ -5,10 +5,26 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 //import "../src/main.scss";
 //import "../src/main.scss";
+import {createStore, applyMiddleware} from 'redux'
+import rootReducer from './reducers'
+import {Provider} from 'react-redux';
+import thunk from "redux-thunk";
+import { configureStore } from "@reduxjs/toolkit";
+//import store from './store/';
+import logger from 'redux-logger';
+
+const store = createStore(
+  rootReducer,
+  applyMiddleware(thunk, logger)
+  //window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() 
+)
+
 
 ReactDOM.render(
   <React.StrictMode>
+    <Provider store={store}>
     <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
