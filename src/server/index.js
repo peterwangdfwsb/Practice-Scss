@@ -20,7 +20,7 @@ app.use((req, res, next)=>{
 
 //Test for Postman
 app.get('/', (req, res) => {
-    res.json({ message: 'Hello World' });   
+    res.json({ message: 'Hello World Sun Moon' });   
 });
 
 app.listen(port, () => {
