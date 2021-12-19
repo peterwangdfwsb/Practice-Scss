@@ -24,6 +24,9 @@ app.get('/', (req, res) => {
     res.json({ message: 'Hello World Sun Moon Test GoGoRo ' });   
 });
 
+
+
+// test hello
 app.listen(port, () => {
     //console.log('Magic happens on port ' + port)};
     console.log('Hello World');
