@@ -35,7 +35,11 @@ app.get('/', (req, res) => {
 
 // test3
 
+<<<<<<< HEAD
 // test4
+=======
+// test5
+>>>>>>> hello
 app.listen(port, () => {
     //console.log('Magic happens on port ' + port)};
     console.log('Hello World 123');
