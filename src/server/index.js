@@ -38,10 +38,10 @@ app.get('/', (req, res) => {
 <<<<<<< HEAD
 // test4
 =======
-// test5
->>>>>>> hello
 
-// test 6 gogo
+// hello test6
+// test 7
+// hello test7
 app.listen(port, () => {
     //console.log('Magic happens on port ' + port)};
     console.log('Hello World 123');
